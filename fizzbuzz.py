@@ -1,10 +1,10 @@
-def is_5(number):
+def is_divisible_5(number):
     if number[-1] == '5' or number[-1] == '0':
         return True
     else:
         return False
 
-def is_3(number):
+def is_divisible_3(number):
     number = abs(int(number))
     number = str(number)
     summ = 0
@@ -15,10 +15,10 @@ def is_3(number):
     elif summ in (1, 2, 4, 5, 7, 8):
         return False
     else:
-        return is_3(str(summ))
+        return is_divisible_3(str(summ))
 
-def is_3_5(number):
-    if is_3(number) and is_5(number):
+def is_divisible_3_5(number):
+    if is_divisible_3(number) and is_divisible_5(number):
         return True
     else:
         return False
@@ -26,11 +26,11 @@ def is_3_5(number):
 seq = [str(i) for i in input().split()]
 length = len(seq)
 for i in range(length):
-    if is_3_5(seq[i]):
+    if is_divisible_3_5(seq[i]):
         seq[i] = 'fizzbuzz'
-    elif is_3(seq[i]):
+    elif is_divisible_3(seq[i]):
         seq[i] = 'fizz'
-    elif is_5(seq[i]):
+    elif is_divisible_5(seq[i]):
         seq[i] = 'buzz'
 
 for i in range(length):
