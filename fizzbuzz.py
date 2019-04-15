@@ -5,8 +5,8 @@ def is_divisible_5(number):
         return False
 
 def is_divisible_3(number):
-    number = abs(int(number))
-    number = str(number)
+    if number[0] == '-':
+        number = number[1:]
     summ = 0
     for char in number:
         summ += int(char)
