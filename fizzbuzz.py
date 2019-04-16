@@ -22,17 +22,24 @@ def is_divisible_3_5(number):
         return True
     else:
         return False
-    
-seq = [str(i) for i in input().split()]
-length = len(seq)
-for i in range(length):
-    if is_divisible_3_5(seq[i]):
-        seq[i] = 'fizzbuzz'
-    elif is_divisible_3(seq[i]):
-        seq[i] = 'fizz'
-    elif is_divisible_5(seq[i]):
-        seq[i] = 'buzz'
 
-for i in range(length):
-    print(seq[i])
+
+def main():
+    seq = [str(i) for i in input().split()]
+    length = len(seq)
+    for i in range(length):
+        if is_divisible_3_5(seq[i]):
+            seq[i] = 'fizzbuzz'
+        elif is_divisible_3(seq[i]):
+            seq[i] = 'fizz'
+        elif is_divisible_5(seq[i]):
+            seq[i] = 'buzz'
+
+    for i in range(length):
+        print(seq[i])
             
+if __name__ == '__main__':
+    try:
+        main()
+    except KeyboardInterrupt:
+        exit()
