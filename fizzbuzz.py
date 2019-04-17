@@ -4,6 +4,7 @@ def is_divisible_5(number):
     else:
         return False
 
+
 def is_divisible_3(number):
     if number[0] == '-':
         number = number[1:]
@@ -17,6 +18,7 @@ def is_divisible_3(number):
     else:
         return is_divisible_3(str(summ))
 
+
 def is_divisible_3_5(number):
     if is_divisible_3(number) and is_divisible_5(number):
         return True
@@ -24,8 +26,7 @@ def is_divisible_3_5(number):
         return False
 
 
-def main():
-    seq = [str(i) for i in input().split()]
+def fizzbuzz(seq):
     length = len(seq)
     for i in range(length):
         if is_divisible_3_5(seq[i]):
@@ -34,9 +35,15 @@ def main():
             seq[i] = 'fizz'
         elif is_divisible_5(seq[i]):
             seq[i] = 'buzz'
+    return seq
 
-    for i in range(length):
-        print(seq[i])
+
+def main():
+    '''Inputs data and calls fizzbuzz func, then prints the return'''
+    seq = [str(i) for i in input().split()]
+    fizzbuzz(seq)
+    print(*seq, sep = '\n')
+
             
 if __name__ == '__main__':
     try:
