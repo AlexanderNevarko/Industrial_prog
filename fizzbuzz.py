@@ -27,6 +27,7 @@ def is_divisible_3_5(number):
 
 
 def fizzbuzz(seq):
+    '''Changes the source sequence using fizzbuzz rule'''
     length = len(seq)
     for i in range(length):
         if is_divisible_3_5(seq[i]):
@@ -39,7 +40,8 @@ def fizzbuzz(seq):
 
 
 def main():
-    '''Inputs data and calls fizzbuzz func, then prints the return'''
+    '''Inputs data and calls fizzbuzz func, 
+    then prints the return'''
     seq = [str(i) for i in input().split()]
     fizzbuzz(seq)
     print(*seq, sep = '\n')
