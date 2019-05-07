@@ -3,5 +3,4 @@ language: python
 python: 3.7
 
 script: 
-  - cd Fizzbuzz
-  - python -m unittest -v utest_fizzbuzz.py
+  - python Fizzbuzz/utest_fizzbuzz.py -v
