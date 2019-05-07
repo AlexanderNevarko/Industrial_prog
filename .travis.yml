@@ -4,3 +4,4 @@ python: 3.7
 
 script: 
   - python fizzbuzz/utest_fizzbuzz.py -v
+  - python obfuscation/utest_algo.py -v
