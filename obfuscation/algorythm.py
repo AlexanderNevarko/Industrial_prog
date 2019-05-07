@@ -26,7 +26,20 @@ def table_search(table, size, hash_func, word):
         return False
 
 
-with open('textfile.txt', 'r') as file:
-    list_ = file.read().split()
-table = hash_table(list_, hash_func)
-print(table_search(table, 1023, hash_func, 'I')) 
+def prepare_table(filename):
+    with open(filename, 'r') as file:
+        list_ = file.read().split()
+    table = hash_table(list_, hash_func)
+    return table
+
+
+def main():
+    table = prepare_table('textfile.txt')
+    print(table_search(table, 1023, hash_func, 'I'))
+
+
+if __name__ == '__main__':
+    try:
+        main()
+    except KeyboardInterrupt:
+        exit()
