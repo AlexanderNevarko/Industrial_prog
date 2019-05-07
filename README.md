@@ -1,8 +1,8 @@
 # Industrial_prog
-####fizzbuzz
+#### fizzbuzz
 Unittests command: "python -m unittest -v utest_fizzbuzz.py"
 Uses "Unittest" framework
-####obfuscation
+#### obfuscation
 algorythm.py - original algorythm
 obf_algorythm.py - obfuscated version
 textfile.txt - required for the work of algotythm
