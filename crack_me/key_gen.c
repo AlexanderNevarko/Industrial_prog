@@ -29,8 +29,8 @@ int main(int argc, char** argv)
 
 int process_login(char* login)
 {
-    int result = 0xffffffff;
-    int temp = 0;
+    uint32_t result = 0xffffffff;
+    uint32_t temp = 0;
     int N = strlen(login);
 
     for (int i = 0; i < N; i++)
@@ -41,7 +41,7 @@ int process_login(char* login)
             temp = result;
             temp &= 1;
             temp = -temp;
-            result >>= 1;
+            result = result >> 1;
             temp &= 0xedb88320;
             result = result ^ temp;
         }
