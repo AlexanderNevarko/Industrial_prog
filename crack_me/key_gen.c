@@ -39,9 +39,10 @@ int process_login(char* login)
         for (int j = 7; j >= 0; j--)
         {
             temp = result;
-            temp = -(temp & 1);
+            temp &= 1;
+            temp = -temp;
             result >>= 1;
-            temp = temp & 0xedb88320;
+            temp &= 0xedb88320;
             result = result ^ temp;
         }
     }
@@ -83,7 +84,7 @@ char* create_letters(int res)
     }
     else
     {
-        
+
     }
 }
 
